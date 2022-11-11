@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/tom-cv/static/css/main.186b0198.css",
+    "main.js": "/tom-cv/static/js/main.a43f689d.js",
+    "static/js/787.c02bcbb6.chunk.js": "/tom-cv/static/js/787.c02bcbb6.chunk.js",
+    "static/media/logo.svg": "/tom-cv/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/tom-cv/index.html",
+    "main.186b0198.css.map": "/tom-cv/static/css/main.186b0198.css.map",
+    "main.a43f689d.js.map": "/tom-cv/static/js/main.a43f689d.js.map",
+    "787.c02bcbb6.chunk.js.map": "/tom-cv/static/js/787.c02bcbb6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.186b0198.css",
+    "static/js/main.a43f689d.js"
+  ]
+}
