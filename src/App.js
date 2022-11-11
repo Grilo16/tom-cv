@@ -1,25 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import CvContainer from './containers/CvContainer';
+import DecorationComponent1 from './components/DecorationComponents/DecorationComponent1';
+import styled from 'styled-components';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <> 
+    
+
+      <CvContainer/>
+      </>
+         
+       
   );
 }
+const DecorationContainer = styled.div`
+postition: absolute;
+display: flex;
+overflow: hiddem;
+width: 210mm;
+height: 297mm;
+`
+
+
 
 export default App;
