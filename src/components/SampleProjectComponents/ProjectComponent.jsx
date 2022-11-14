@@ -21,7 +21,7 @@ const ProjectComponent = ({projectObj}) => {
         <StyledP>{projectObj.stack.backEnd}</StyledP>
         <StyledP>{projectObj.stack.frontEnd}</StyledP>
         {projectObj.liveLink
-        ?<StyledP>{projectObj.liveLink}</StyledP>
+        ?<StyledH4>{projectObj.liveLink}</StyledH4>
         :null
     }
         </RightColumn>

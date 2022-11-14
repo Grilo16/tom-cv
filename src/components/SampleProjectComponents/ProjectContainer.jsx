@@ -12,18 +12,23 @@ const ProjectContainer = () => {
         </a>
       ),
       stack: { backEnd: "java/spring", frontEnd: "javaScript/React" },
+      liveLink: (
+        <a href="https://grilo16.github.io/RogueBookingsClient/">
+          Live link
+        </a>
+      ),
     },
     {
       name: "Ducky's Revenge",
       linkRepo: (
         <a href="https://github.com/Grilo16/duckys_revenge">
-          Grilo16/duckys_revenge"
+          Grilo16/duckys_revenge
         </a>
       ),
       stack: { backEnd: "mongoDb/localStorage", frontEnd: "javaScript/React" },
       liveLink: (
         <a href="https://grilo16.github.io/DuckysRevengeGitHost/">
-          GithubPages link
+          Live Link
         </a>
       ),
     },
@@ -58,5 +63,6 @@ const SkillsDiv = styled.div`
   scale: 0.9;
   border-radius: 10mm;
   margin-top: 10mm;
+  width: max-content;
 `;
 export default ProjectContainer;
