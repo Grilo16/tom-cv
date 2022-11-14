@@ -11,7 +11,7 @@ import EducationContainer from "../components/EducationComponents/EducationConta
 import CoursesContainer from "../components/CoursesComponents/CoursesContainer";
 import LanguagesContainer from "../components/LanguagesComponents/LanguagesContainer";
 import DecorationComponent1 from "../components/DecorationComponents/DecorationComponent1";
-import ProjectContainer from "../components/SampleProjectComponents/ProjectContainer";
+import ProjectContainer from "../components/ProjectComponents/ProjectContainer";
 
 const CvContainer = () => {
 

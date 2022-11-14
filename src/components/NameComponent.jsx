@@ -35,6 +35,7 @@ font-size:${(props)=>props.fontSize ? props.fontSize : "19pt"};
 background-color:${(props)=>props.backgroundColor ? props.backgroundColor : null};
 height:${(props)=>props.height ? props.height : null};
 width:${(props)=>props.width ? props.width : null};
+border-radius:${(props)=>props.borderRadius ? props.borderRadius : null};
 `
 export const StyledH2 = styled.h2`
 margin-top:${(props)=>props.marginTop ? props.marginTop : "3.45mm"};
@@ -49,6 +50,7 @@ font-size:${(props)=>props.fontSize ? props.fontSize : "17pt"};
 background-color:${(props)=>props.backgroundColor ? props.backgroundColor : null};
 height:${(props)=>props.height ? props.height : null};
 width:${(props)=>props.width ? props.width : null};
+border-radius:${(props)=>props.borderRadius ? props.borderRadius : null};
 `
 export const StyledH3 = styled.h3`
 margin-top:${(props)=>props.marginTop ? props.marginTop : "1.45mm"};
@@ -63,6 +65,7 @@ font-size:${(props)=>props.fontSize ? props.fontSize : "15pt"};
 background-color:${(props)=>props.backgroundColor ? props.backgroundColor : null};
 height:${(props)=>props.height ? props.height : null};
 width:${(props)=>props.width ? props.width : null};
+border-radius:${(props)=>props.borderRadius ? props.borderRadius : null};
 `
 export const StyledH4 = styled.h4`
 margin-top:${(props)=>props.marginTop ? props.marginTop : "0.9mm"};
@@ -77,6 +80,7 @@ font-size:${(props)=>props.fontSize ? props.fontSize : "12pt"};
 background-color:${(props)=>props.backgroundColor ? props.backgroundColor : null};
 height:${(props)=>props.height ? props.height : null};
 width:${(props)=>props.width ? props.width : null};
+border-radius:${(props)=>props.borderRadius ? props.borderRadius : null};
 `
 export const StyledP = styled.p`
 margin-top:${(props)=>props.marginTop ? props.marginTop : "0.9mm"};
@@ -91,6 +95,7 @@ font-size:${(props)=>props.fontSize ? props.fontSize : "10pt"};
 background-color:${(props)=>props.backgroundColor ? props.backgroundColor : null};
 height:${(props)=>props.height ? props.height : null};
 width:${(props)=>props.width ? props.width : null};
+border-radius:${(props)=>props.borderRadius ? props.borderRadius : null};
 `
 
 export default NameComponent;

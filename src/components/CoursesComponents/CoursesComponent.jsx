@@ -16,6 +16,7 @@ const CoursesComponent = ({courseObj}) => {
             <StyledP> {courseObj.dates.start + " - " + courseObj.dates.finish}</StyledP>
         </FlexDiv>
     </FlexDiv>
+    <StyledP>{courseObj.description}</StyledP>
     
         </CourseComponentDiv>     
     
