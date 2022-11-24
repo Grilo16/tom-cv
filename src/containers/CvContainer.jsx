@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import ContactComponent from "../components/ContactComponent";
 import Interests from "../components/InterestsComponent";
-import NameComponent, { StyledH1, StyledH2, StyledH3, StyledH4 } from "../components/NameComponent";
+import NameComponent, {
+  StyledH1,
+  StyledH2,
+  StyledH3,
+  StyledH4,
+} from "../components/NameComponent";
 import ProfessionalExperienceComponent from "../components/ExperienceComponents/ExperienceContainer";
 import ProfileComponent from "../components/ProfileComponent";
 import SkillsContainer from "../components/SkillsComponents/SkillsContainer";
@@ -14,57 +19,46 @@ import DecorationComponent1 from "../components/DecorationComponents/DecorationC
 import ProjectContainer from "../components/ProjectComponents/ProjectContainer";
 
 const CvContainer = () => {
-
-
-    return (
-        <>
-        <BackgroundDiv>
-                <LeftColumnComponent>
-                <ContactComponent/>
-                <SkillsContainer/>
-                <LanguagesContainer/>
-                <Interests/>                
-                </LeftColumnComponent>
+  return (
+    <>
+      <BackgroundDiv>
+        <LeftColumnComponent>
+          <ContactComponent />
+          <SkillsContainer />
+          <LanguagesContainer />
+          <Interests />
+        </LeftColumnComponent>
 
         {/* <DecorationComponent1/> */}
 
-
-                <RightColumnComponent>
-               <NameComponent/>
-               <ProfileComponent/>
-               <ProfessionalExperienceComponent/>
-               <EducationContainer/>
-               <CoursesContainer/>
-                </RightColumnComponent>
-
-
+        <RightColumnComponent>
+          <NameComponent />
+          <ProfileComponent />
+          <ProfessionalExperienceComponent />
+          <EducationContainer />
+          <CoursesContainer />
+        </RightColumnComponent>
 
         <ProjectsDiv>
-            <ProjectContainer/>
+          <ProjectContainer />
         </ProjectsDiv>
-        </BackgroundDiv>
-        </>
-
-             
-    )
+      </BackgroundDiv>
+    </>
+  );
 };
 
 const BackgroundDiv = styled.div`
-display: grid;
-height: 297mm;
-background-color: white;
-grid-template-columns: 100%;
-margin-top: 10mm;
-
-`
+  display: grid;
+  height: 297mm;
+  background-color: white;
+  grid-template-columns: 100%;
+  margin-top: 10mm;
+`;
 
 const ProjectsDiv = styled.div`
-grid-column: span 2/2;
-max-height: 55mm;
-margin-left: 85mm;
-
-`
-
-
+  grid-column: span 2/2;
+  max-height: 55mm;
+  margin-left: 85mm;
+`;
 
 export default CvContainer;

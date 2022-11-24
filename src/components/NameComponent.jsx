@@ -9,7 +9,7 @@ const NameComponent = () => {
             Thomas Jose Ferreira Britton
         </StyledH1>
         <StyledH2>
-            Junior Software Developer
+            Software Developer
         </StyledH2>
         </NameDiv>
         
