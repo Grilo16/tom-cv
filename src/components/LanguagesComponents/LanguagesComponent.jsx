@@ -6,16 +6,16 @@ const LanguagesComponent = ({languageObj}) => {
 
     if(languageObj)
     return (
-        <languageDiv>  
+        <StyledDiv>  
             <StyledH4>{languageObj.language}</StyledH4>
             <StyledP>{languageObj.proficiency}</StyledP>
 
-        </languageDiv>
+        </StyledDiv>
 
     )
 };
 
-const languageDiv = styled.div`
+const StyledDiv = styled.div`
 
 `
 

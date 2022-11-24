@@ -6,7 +6,7 @@ const Interests = () => {
         
         <InterestsDiv> 
         <StyledH3>Interests</StyledH3>
-        <StyledP>I really love to code!</StyledP>
+        <StyledP>Maths, Physics, Biology, Extreme sports, Motorcycles, Online Games.</StyledP>
         </InterestsDiv>
         
     )

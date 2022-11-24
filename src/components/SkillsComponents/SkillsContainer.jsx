@@ -6,15 +6,15 @@ const SkillsContainer = () => {
 
 
 const Skills = [
-    {skillName : "C", skillScore : 4}, 
-    {skillName : "Python", skillScore : 8}, 
-    {skillName : "JavaScript", skillScore : 8,},
-    {skillName : "Java", skillScore : 7}, 
-    {skillName : "HTML", skillScore : 6}, 
-    {skillName : "Css", skillScore : 6}, 
-    {skillName : "React", skillScore : 7}, 
-    {skillName : "MongoDb", skillScore : 6}, 
-    {skillName : "Postgres", skillScore : 8}, 
+    {skillName : "Java", skillScore : 8}, 
+    {skillName : "JavaScript", skillScore : 9,},
+    {skillName : "Python", skillScore : 9}, 
+    {skillName : "Postgres", skillScore : 9}, 
+    {skillName : "MongoDB", skillScore : 9}, 
+    {skillName : "React", skillScore : 9}, 
+    {skillName : "CSS", skillScore : 8}, 
+    {skillName : "HTML", skillScore : 8}, 
+    {skillName : "C", skillScore : 6}, 
 ]
 
 const skills = Skills.map((skillObj, index)=> {

@@ -6,6 +6,14 @@ import ExperienceComponent from "./ExperienceComponent";
 const ExperienceContainer = () => {
   const experiences = [
     {
+      title: "Software Developer",
+      business: "CodeClan",  
+      dates: "Aug. 2022 - Nov. 2022", 
+      accomplishments: ["Professional software development bootcamp, 800 hours of in person coding experience", "A full stack python project using a postgress database and and flask framework", "A full stack javascript ducky shooter game project using express, MongoDB/localStorage as a server and React front end", 
+      "A full stack group project of a Business/bookings managing system using Java/springJPA/Postgres server as a back end, javascript/React front end"
+      ]
+    },
+    {
       title: "Research Assistant",
       business: "AlbaScience, Edinburgh",
       dates: "Nov. 2021 - Aug. 2022",
