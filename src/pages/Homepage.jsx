@@ -1,30 +1,15 @@
 import styled from "styled-components";
-import OrbComponent from "../components/LayoutComponents/OrbComponent";
+import OrbsContainer from "../components/LayoutComponents/OrbsContainer";
 
 const Homepage = () => {
     return (
-
         <CenteredFlexDiv>
 
-        <OrbComponent/>
+        <OrbsContainer OrbSize={25}/>
 
         </CenteredFlexDiv>
-
     )
 }; 
-
-
-
-
-const HomepageTitle = styled.h1`
-font-size: 80pt;
-margin: 0%;
-`
-const HomepageSubtitle = styled.h3`
-margin: 0%;
-margin-left: -28%;
-`
-
 
 
 const CenteredFlexDiv = styled.div`

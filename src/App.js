@@ -5,6 +5,7 @@ import DecorationComponent1 from './components/DecorationComponents/DecorationCo
 import styled from 'styled-components';
 import {HashRouter as Router , Routes, Route } from "react-router-dom"
 import Homepage from './pages/Homepage';
+import TestPage from './pages/TestPage';
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
     <Routes >
       <Route path={"/"} element={<Homepage/>} />
       <Route path={"/pdf"} element={<CvContainer/>} />
+      <Route path={"/test"} element={<TestPage/>} />
     </Routes>
   </Router>    
 
