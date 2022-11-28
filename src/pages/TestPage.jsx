@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import OrbComponent from "../components/LayoutComponents/OrbComponent";
 import OrbsContainer from "../components/LayoutComponents/OrbsContainer";
+import StackIconComponent from "../components/StackIconComponents/StackIconComponent";
+import StackIconContainer from "../components/StackIconComponents/StackIconContainer";
 
 const TestPage = () => {
  
@@ -15,8 +17,12 @@ const TestPage = () => {
         </nav>
         <h1>this is a test page</h1>
         <TestDiv>  
+        {/* <OrbsContainer/> */}
 
-        <OrbsContainer/>
+          {/* <StackIconContainer height={10}/> */}
+          <StackIconContainer height={5} width={20} duration={20}/>
+          {/* <StackIconContainer height={5}/> */}
+        
 
 
         </TestDiv>
@@ -38,7 +44,7 @@ const TestDiv = styled.div`
 background-color: grey;
 height: 50vh;
 width: 50vw;
-display: grid;
+
 `
 
 

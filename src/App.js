@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import CvContainer from './containers/CvContainer';
-import DecorationComponent1 from './components/DecorationComponents/DecorationComponent1';
+import DecorationComponent1 from './components/PdfComponents/DecorationComponents/DecorationComponent1';
 import styled from 'styled-components';
 import {HashRouter as Router , Routes, Route } from "react-router-dom"
 import Homepage from './pages/Homepage';
 import TestPage from './pages/TestPage';
+import CvPdfContainer from './components/PdfComponents/CvPdfContainer';
 
 function App() {
   
@@ -14,7 +14,7 @@ function App() {
   <Router>
     <Routes >
       <Route path={"/"} element={<Homepage/>} />
-      <Route path={"/pdf"} element={<CvContainer/>} />
+      <Route path={"/pdf"} element={<CvPdfContainer/>} />
       <Route path={"/test"} element={<TestPage/>} />
     </Routes>
   </Router>    

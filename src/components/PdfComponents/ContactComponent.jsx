@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { StyledH2, StyledH3, StyledH4, StyledP } from "./NameComponent";
-import contactInfo from "../cvData/contactInfo";
+import contactInfo from "./cvData/contactInfo";
 
 const ContactComponent = () => {
   const displayContactInfo = contactInfo.map((item) => {

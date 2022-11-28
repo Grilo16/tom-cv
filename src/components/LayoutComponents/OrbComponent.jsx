@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import CenterLogo from "./CenterLogo";
+
 import { OrbContext } from "./OrbsContainer";
 
 const OrbComponent = ({
@@ -11,8 +12,11 @@ const OrbComponent = ({
   noHover,
   logo,
   orbNumber,
+  data,
 }) => {
   const { state, dispatch } = useContext(OrbContext);
+
+
 
   const orbDefaultStyle = { height: size, width: size, rotateY: 0, row: row, column: column, borderRadius: null};
 
@@ -69,8 +73,18 @@ const OrbComponent = ({
         borderRadius={orbStyle.borderRadius}
         noHover={noHover}
         onClick={handleSelection}
+        justifyContent={state.selectedOrb === orbNumber ? "top" : "center"} 
+        overflow={state.selectedOrb === orbNumber ? "hidden" : null} 
       >
         {label ? <OrbLabelP fontSize={size / 4}>{label}</OrbLabelP> : " "}
+       {state.selectedOrb === orbNumber 
+       ?
+       <IconHolderDiv>
+        {data ? data : null}
+        </IconHolderDiv>
+      :null  
+      }
+
       </OrbElementDiv>
     );
   }
@@ -95,8 +109,9 @@ const OrbElementDiv = styled.div`
   margin: ${(props) => (props.margin ? props.margin + "vw" : null)};
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  overflow: ${(props) => (props.overflow ? props.overflow : null)};
+  justify-content: ${(props) => (props.justifyContent ? props.justifyContent : "center")};
+  align-items: ${(props) => (props.alignItems ? props.alignItems : "center")};
   transform: ${(props) =>
     props.rotateY ? "rotateY(" + props.rotateY + "deg)" : "rotateY(0deg)"};
   &:hover {
@@ -110,6 +125,15 @@ const OrbLabelP = styled.p`
   text-align: center;
   padding: 15px;
   color: #c2c4d1;
+  margin: 0;
 `;
+
+
+
+const IconHolderDiv = styled.div`
+
+`
+
+
 
 export default OrbComponent;
