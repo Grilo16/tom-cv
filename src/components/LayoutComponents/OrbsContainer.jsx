@@ -101,7 +101,7 @@ grid-auto-columns: max-content;
 grid-auto-rows: max-content;
 justify-content: center;
 margin-left: 35%;
-perspective: 1000px;
+perspective: 100px;
 perspective-origin: 50% 30%;
 
 

@@ -3,50 +3,65 @@ import styled from "styled-components";
 import CenterLogo from "./CenterLogo";
 import { OrbContext } from "./OrbsContainer";
 
-const OrbComponent = ({ label, size, row, column, noHover, logo, orbNumber }) => {
+const OrbComponent = ({
+  label,
+  size,
+  row,
+  column,
+  noHover,
+  logo,
+  orbNumber,
+}) => {
+  const { state, dispatch } = useContext(OrbContext);
 
-const {state, dispatch} = useContext(OrbContext)
-
- const orbDefaultStyle = {height: size, width: size, rotateY: 0}
+  const orbDefaultStyle = { height: size, width: size, rotateY: 0, row: row, column: column};
 
   const [orbStyle, setOrbStyle] = useState(orbDefaultStyle);
 
+  useEffect(() => {
+    state.selectedOrb === orbNumber
+      ? setOrbStyle((orbStyle) => ({
+          ...orbStyle,
+          height: size * 1.5, 
+          width: size * 1.5,
+          rotateY: 0,
+        }))
+        : state.selectedOrb > 0 
+        ? setOrbStyle((orbStyle) => ({
+          ...orbDefaultStyle,
+          }))
+        :
 
-useEffect(()=>{
-  state.selectedOrb === orbNumber ? setOrbStyle((orbStyle) => ({...orbStyle, height: size + 15 , width: size + 25, rotateY: 30}))
-    : setOrbStyle((orbStyle) => (orbDefaultStyle))
-  
-},[state.selectedOrb])
+      setOrbStyle((orbStyle) => orbDefaultStyle);
+  }, [state.selectedOrb]);
 
-const handleSelection = () => {
-  dispatch({type: "SelectOrbNumber", orbNumber})
-}
+  const handleSelection = () => {
+    dispatch({ type: "SelectOrbNumber", orbNumber });
+  };
 
-const handleDeselectOrb = () => {
-  dispatch({type: "SelectOrbNumber", orbNumber: 0})
-}
-
-
+  const handleDeselectOrb = () => {
+    dispatch({ type: "SelectOrbNumber", orbNumber: 0 });
+  };
 
   if (logo) {
     return (
       <OrbElementDiv
-        gridRow={row}
-        gridColumn={column}
+        gridRow={orbStyle.row}
+        gridColumn={orbStyle.column}
         height={orbStyle.height}
         width={orbStyle.width}
+        rotateY={orbStyle.rotateY}
         noHover={noHover}
         onClick={handleDeselectOrb}
-        >
+      >
         <CenterLogo size={size} />
       </OrbElementDiv>
     );
   } else {
-
     return (
       <OrbElementDiv
-        gridRow={row}
-        gridColumn={column}
+        gridRow={orbStyle.row}
+        gridColumn={orbStyle.column}
         height={orbStyle.height}
         width={orbStyle.width}
         rotateY={orbStyle.rotateY}
@@ -60,9 +75,13 @@ const handleDeselectOrb = () => {
 };
 
 const OrbElementDiv = styled.div`
-  transition: 0.5s; 
+  transition: 0.5s;
   height: ${(props) =>
-    props.height ? props.height + "vw" : props.size ? props.size + "vw" : "80vw"};
+    props.height
+      ? props.height + "vw"
+      : props.size
+      ? props.size + "vw"
+      : "80vw"};
   width: ${(props) =>
     props.width ? props.width + "vw" : props.size ? props.size + "vw" : "40vw"};
   background-color: #515369;
@@ -71,16 +90,16 @@ const OrbElementDiv = styled.div`
   border-radius: ${(props) =>
     props.borderRadius ? props.borderRadius + "vw" : "50%"};
   scale: ${(props) => (props.scale ? props.scale : null)};
-  margin: ${(props) => (props.margin ? props.margin +"vw": null)};
+  margin: ${(props) => (props.margin ? props.margin + "vw" : null)};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: ${(props) => (props.rotateY ? "rotateY("+props.rotateY + "deg)" : "rotateY(0deg)")};
+  transform: ${(props) =>
+    props.rotateY ? "rotateY(" + props.rotateY + "deg)" : "rotateY(0deg)"};
   &:hover {
     ${(props) =>
       props.noHover ? "transition: 0.5s;" : "transition: 0.5s; scale: 1.1;"}
-
   }
 `;
 
