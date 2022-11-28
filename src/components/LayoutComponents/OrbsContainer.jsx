@@ -13,7 +13,7 @@ import Python from "../../static/ProgramingLanguagesIcons/Python.png"
 import React from "../../static/ProgramingLanguagesIcons/React.png"
 import Spring from "../../static/ProgramingLanguagesIcons/Spring.png"
 import { Link } from "react-router-dom";
-import StackIconContainer from "../StackIconComponents/StackIconContainer";
+import StackIconContainer from "../ScrollingStackIconComponents/StackIconContainer";
 
 export const OrbContext = createContext(null)
 
@@ -23,6 +23,9 @@ const reducer = (state, action) => {
     case "SelectOrbNumber":
       return {...state, selectedOrb: action.orbNumber}
 
+    case "SelectStackItem": 
+      return {...state, selectedStackItem : action.selectedStackItem}
+
     default: 
       return state
   }
@@ -31,7 +34,8 @@ const reducer = (state, action) => {
 const OrbsContainer = ({OrbSize}) => {
 
 const initialStates = {
-  selectedOrb: null
+  selectedOrb: null,
+  selectedStackItem: null
 }
 
 const [state, dispatch] = useReducer(reducer, initialStates)
@@ -80,7 +84,7 @@ const [state, dispatch] = useReducer(reducer, initialStates)
       column: "3",
       ratio: 4,
       label: "Skills",
-      data: <StackIconContainer height={5} width={20} duration={20}/>
+      data: <StackIconContainer height={5} width={20} duration={6}/>
       ,
     },
     {
@@ -88,6 +92,14 @@ const [state, dispatch] = useReducer(reducer, initialStates)
       column: "4",
       ratio: 8,
       label: null,
+      data: null,
+    },
+    {
+      row: "2/11",
+      column: "5",
+      ratio: 1,
+      display: true,
+      label: " ",
       data: null,
     },
   ].map((orb, index) => {
@@ -98,7 +110,7 @@ const [state, dispatch] = useReducer(reducer, initialStates)
             )
     }
     return (
-        <OrbComponent key={index} orbNumber={index}  label={orb.label ? orb.label: "test"}  size={maxSize/orb.ratio} row={orb.row} column={orb.column} data={orb.data}/>
+        <OrbComponent key={index} orbNumber={index}  label={orb.label ? orb.label: "test"}  size={maxSize/orb.ratio} row={orb.row} column={orb.column} data={orb.data} display={orb.display}/>
 
     );
   });
