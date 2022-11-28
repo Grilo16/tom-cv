@@ -29,46 +29,53 @@ const [state, dispatch] = useReducer(reducer, initialStates)
       row: "4/8",
       column: "2",
       ratio: 1,
+      label: null,
     },
     {
       row: "4",
       column: "3",
       ratio: 2,
+      label: null,
     },
     {
       row: "2/4",
       column: "2",
       ratio: 4,
+      label: null,
     },
     {
       row: "7",
       column: "1",
       ratio: 8,
+      label: null,
     },
     {
       row: "8",
       column: "2",
       ratio: 2,
+      label: "A longer Label",
     },
     {
       row: "6/8",
       column: "3",
       ratio: 4,
+      label: "Skills",
     },
     {
       row: "3",
       column: "4",
       ratio: 8,
+      label: null,
     },
   ].map((orb, index) => {
     const maxSize = OrbSize ? OrbSize : 13;
     if (index === 0){
         return (
-            <OrbComponent key={index} label={"test"} size={maxSize/orb.ratio} row={orb.row} column={orb.column} noHover={true} logo={true}/>
+            <OrbComponent key={index} label={orb.label ? orb.label: "test"} size={maxSize/orb.ratio} row={orb.row} column={orb.column} noHover={true} logo={true}/>
             )
     }
     return (
-        <OrbComponent key={index} orbNumber={index}  label={"test"} size={maxSize/orb.ratio} row={orb.row} column={orb.column}/>
+        <OrbComponent key={index} orbNumber={index}  label={orb.label ? orb.label: "test"}  size={maxSize/orb.ratio} row={orb.row} column={orb.column} />
 
     );
   });

@@ -14,7 +14,7 @@ const OrbComponent = ({
 }) => {
   const { state, dispatch } = useContext(OrbContext);
 
-  const orbDefaultStyle = { height: size, width: size, rotateY: 0, row: row, column: column};
+  const orbDefaultStyle = { height: size, width: size, rotateY: 0, row: row, column: column, borderRadius: null};
 
   const [orbStyle, setOrbStyle] = useState(orbDefaultStyle);
 
@@ -23,7 +23,8 @@ const OrbComponent = ({
       ? setOrbStyle((orbStyle) => ({
           ...orbStyle,
           height: size * 1.5, 
-          width: size * 1.5,
+          width: size * 3,
+          borderRadius: 1,
           rotateY: 0,
         }))
         : state.selectedOrb > 0 
@@ -65,10 +66,11 @@ const OrbComponent = ({
         height={orbStyle.height}
         width={orbStyle.width}
         rotateY={orbStyle.rotateY}
+        borderRadius={orbStyle.borderRadius}
         noHover={noHover}
         onClick={handleSelection}
       >
-        {label ? <OrbLabelP fontSize={size / 2}>{label}</OrbLabelP> : " "}
+        {label ? <OrbLabelP fontSize={size / 4}>{label}</OrbLabelP> : " "}
       </OrbElementDiv>
     );
   }
@@ -99,12 +101,14 @@ const OrbElementDiv = styled.div`
     props.rotateY ? "rotateY(" + props.rotateY + "deg)" : "rotateY(0deg)"};
   &:hover {
     ${(props) =>
-      props.noHover ? "transition: 0.5s;" : "transition: 0.5s; scale: 1.1;"}
+      props.noHover ? "transition: 0.5s;" : "transition: 0.5s; scale: 1.1; margin: 1vw;"}
   }
 `;
 
 const OrbLabelP = styled.p`
   font-size: ${(props) => (props.fontSize ? props.fontSize + "vw" : "100%")};
+  text-align: center;
+  padding: 15px;
   color: #c2c4d1;
 `;
 
